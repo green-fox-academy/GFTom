@@ -1,11 +1,13 @@
 public class TwoNumbers {
   public static void main(String[] args) {
-    int a = 13;
-    int b = 22;
+    double a = 13;
+    double b = 22;
     System.out.println(a + b);
     System.out.println(a - b);
     System.out.println(a * b);
+    double c = a / b;
+    System.out.println(c);
     System.out.println(a / b);
-    System.out.println();
+    System.out.println(b % a);
   }
 }
