@@ -7,11 +7,6 @@ import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class Drawing {
 
-
-  public static void oneLineDraw(Graphics g, int x, int y) {
-    g.drawLine(x, y, x + 50, y);
-  }
-
   public static void mainDraw(Graphics graphics) {
     int x = 10;
     int y = 10;
@@ -23,6 +18,10 @@ public class Drawing {
     // The x and y coordinates of the line's starting point
     // and draws a 50 long horizontal line from that point.
     // Draw 3 lines with that function. Use loop for that.
+  }
+
+  public static void oneLineDraw(Graphics g, int x, int y) {
+    g.drawLine(x, y, x + 50, y);
   }
 
   // Don't touch the code below
