@@ -1,39 +1,33 @@
 import javax.swing.*;
 
 import java.awt.*;
-import java.util.Random;
 
 import static javax.swing.JFrame.EXIT_ON_CLOSE;
 
 public class Drawing {
-
   public static void oneRectDraw(Graphics graphics, int x, int y){
-    int width = 40;
-    int height = 40;
-    Random rand = new Random();
-    //int rgb = Color.HSBtoRGB((float)hue,(float)0.5,(float)0.5);
-    //Color color = new Color(rgb);
-    int red = rand.nextInt(255);
-    int green = rand.nextInt(240);
-    graphics.setColor(new Color(red, green, 0));
-    //graphics.setColor(Color.GREEN);
+    int width = 50;
+    int height = 50;
     graphics.drawRect(x, y, width, height);
   }
 
   public static void mainDraw(Graphics graphics){
-    // draw four different size and color rectangles.
+    // create a square drawing function that takes 2 parameters:
+    // the x and y coordinates of the square's top left corner
+    // and draws a 50x50 square from that point.
+    // draw 3 squares with that function.
     // avoid code duplication.
-    Random rand = new Random();
-    int x = rand.nextInt(50) + 1;
-    int y = rand.nextInt(50) + 1;
+    int x = 10;
+    int y = 10;
     for (int i = 0; i < 3; i++) {
-      oneRectDraw(graphics, x + (i * 5), y + (i * 5));
+      oneRectDraw(graphics, x + (i * 70), y + (i * 70));
     }
   }
 
   //    Don't touch the code below
   static int WIDTH = 320;
   static int HEIGHT = 343;
+
   public static void main(String[] args) {
     JFrame jFrame = new JFrame("Drawing");
     jFrame.setSize(new Dimension(WIDTH, HEIGHT));
