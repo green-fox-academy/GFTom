@@ -2,18 +2,19 @@ import java.awt.*;
 
 public class PostIt {
 
-    Color backGroundColor;
+    String backGroundColor;
     String textPostIt;
-    Color textColor;
+    String textColor;
 
-    public PostIt(Color backGroundColor, String textPostIt, Color textColor) {
+    public PostIt(String backGroundColor, String textPostIt, String textColor) {
         this.backGroundColor = backGroundColor;
-        this.textColor = textColor;
         this.textPostIt = textPostIt;
+        this.textColor = textColor;
     }
+
     @Override
     public String toString() {
-    return "this.textPostIt";
+    return "an "+ backGroundColor + " with " + textColor + " text: " + textPostIt;
     }
 }
 
