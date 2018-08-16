@@ -13,4 +13,14 @@ public class Sharpie {
     public void use() {
         inkAmount = inkAmount - 5;
     }
+
+    public boolean isSharpieUsable (){
+        //if (inkAmount > 0) {
+          //  return true;
+        //} else {
+          //  return false;
+        //}
+
+        return inkAmount > 0;
+    }
 }
