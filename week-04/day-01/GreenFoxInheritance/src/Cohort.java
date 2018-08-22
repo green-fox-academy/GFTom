@@ -18,7 +18,7 @@ public class Cohort extends Person {
         students.add(student);
     }
 
-    public void addMentors(Mentor mentor) {
+    public void addMentor(Mentor mentor) {
         mentors.add(mentor);
     }
 

@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class Main extends Person{
+public class Main{
     public static void main(String[] args) {
 
     ArrayList<Person> people = new ArrayList<>();

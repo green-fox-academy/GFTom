@@ -1,13 +1,14 @@
 public class Mentor extends Person {
 
-    private String level;
+    protected String level;
 
-    public Mentor(String name, int age, String gender) {
+    public Mentor(String name, int age, String gender, String level) {
         super(name, age, gender);
         this.level = level;
     }
 
     public Mentor() {
+        super();
         this.level = "intermediate";
     }
 
