@@ -13,7 +13,7 @@ public class Pirates {
     public void drinkSomeRum() {
         if (this.isSleeping == false && this.isDead == false) {
             rumLevel++;
-            if (rumLevel < 9) {
+            if (rumLevel > 9) {
                 die();
             }
         }
