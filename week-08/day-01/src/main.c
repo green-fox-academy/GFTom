@@ -8,7 +8,6 @@
 /* Private variables ---------------------------------------------------------*/
 UART_HandleTypeDef uart_handle;
 
-
 GPIO_InitTypeDef led;
 
 #undef __GNUC__
@@ -68,8 +67,18 @@ int main(void) {
 
 	BSP_COM_Init(COM1, &uart_handle);
 
-	while (1) {
+	BSP_LED_Init(LED1);
+	BSP_PB_Init(BUTTON_WAKEUP, BUTTON_MODE_GPIO);
 
+	while (1) {
+		if (BSP_PB_GetState(BUTTON_WAKEUP)) {
+			BSP_LED_On(LED1);
+			HAL_Delay(500);
+			BSP_LED_Off(LED1);
+			HAL_Delay(500);
+		}else{
+			BSP_LED_Off(LED1);
+		}
 
 	}
 }
