@@ -1,0 +1,6 @@
+15:44:08 **** Incremental Build of configuration Debug for project gpio_led ****
+make -j2 all 
+make: Nothing to be done for 'all'.
+
+15:44:09 Build Finished (took 967ms)
+
