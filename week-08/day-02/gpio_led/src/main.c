@@ -109,7 +109,10 @@ int main(void) {
 
 	HAL_GPIO_Init(GPIOF, &tdf8);
 
+	BSP_PB_Init(BUTTON_WAKEUP, BUTTON_MODE_GPIO);
+
 	while(1){
+		if (BSP_PB_GetState(BUTTON_WAKEUP)) {
 		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_SET);   // setting the pin to 1
 		HAL_Delay(500);                                      // wait a second
 		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_0, GPIO_PIN_RESET); // setting the pin to 0
@@ -126,6 +129,9 @@ int main(void) {
 		HAL_Delay(500);
 		HAL_GPIO_WritePin(GPIOF, GPIO_PIN_8, GPIO_PIN_RESET);
 		HAL_Delay(100);
+		}else{
+			BSP_LED_Off();
+		}
 	}
 }
 /**
