@@ -1473,3 +1473,1030 @@ Finished building: ../src/system_stm32f7xx.c
 11:49:12 **** Incremental Build of configuration Debug for project UART2_project ****
 make -j2 all 
 make: Nothing to be done for 'all'.
+10:19:32 **** Incremental Build of configuration Debug for project UART2_project ****
+make -j2 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\green-fox\week-08\day-03\UART2_project\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -DSTM32 -DSTM32F7 -DSTM32F746NGHx -DSTM32F746G_DISCO -DDEBUG -DSTM32F746xx -DUSE_HAL_DRIVER -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ampire480272" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/n25q512a" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/s5k5cag" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/mfxstm32l152" -I"C:/green-fox/week-08/day-03/UART2_project/CMSIS/device" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/n25q128a" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ts3510" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/st7735" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/rk043fn48h" -I"C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/Legacy" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ov9655" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/otm8009a" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/STM32746G-Discovery" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/Common" -I"C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/stmpe811" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/wm8994" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Fonts" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ft5336" -I"C:/green-fox/week-08/day-03/UART2_project/inc" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ft6x06" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/exc7200" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/st7789h2" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Log" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/adv7533" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ampire640480" -I"C:/green-fox/week-08/day-03/UART2_project/CMSIS/core" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/mx25l512" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:71:34: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  HAL_UART_Transmit(&uart_handle, "szia\r\n", 6, 0xFFFF)
+                                  ^~~~~~~~~~
+In file included from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:376:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_uart.h:1137:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~~
+../src/main.c:72:2: error: expected ';' before 'printf'
+  printf("Hello world\n");
+  ^~~~~~
+../src/main.c:80:14: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness [-Wpointer-sign]
+   if (strcmp(pCommand, "on") == 0) {
+              ^~~~~~~~
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\stdio.h:29:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_def.h:48,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_rcc.h:45,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:240,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\string.h:36:6: note: expected 'const char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int  _EXFUN(strcmp,(const char *, const char *));
+      ^
+../src/main.c:83:21: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness [-Wpointer-sign]
+   } else if (strcmp(pCommand, "off") == 0) {
+                     ^~~~~~~~
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\stdio.h:29:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_def.h:48,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_rcc.h:45,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:240,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\string.h:36:6: note: expected 'const char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int  _EXFUN(strcmp,(const char *, const char *));
+      ^
+../src/main.c:86:21: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness [-Wpointer-sign]
+   } else if (strcmp(pCommand, "\0\0\0\0") == 0) {
+                     ^~~~~~~~
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\stdio.h:29:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_def.h:48,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_rcc.h:45,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:240,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\string.h:36:6: note: expected 'const char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int  _EXFUN(strcmp,(const char *, const char *));
+      ^
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+10:19:40 **** Incremental Build of configuration Debug for project UART_project ****
+make -j2 all 
+make: Nothing to be done for 'all'.
+10:19:44 **** Incremental Build of configuration Debug for project gpio_led ****
+make -j2 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+Building file: ../Utilities/STM32746G-Discovery/stm32746g_discovery.c
+C:\green-fox\week-08\day-02\gpio_led\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -DSTM32 -DSTM32F7 -DSTM32F746NGHx -DSTM32F746G_DISCO -DDEBUG -DSTM32F746xx -DUSE_HAL_DRIVER -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire480272" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q512a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/s5k5cag" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mfxstm32l152" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/device" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q128a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ts3510" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7735" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/rk043fn48h" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc/Legacy" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ov9655" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/otm8009a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/STM32746G-Discovery" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/Common" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/stmpe811" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/wm8994" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Fonts" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft5336" -I"C:/green-fox/week-08/day-02/gpio_led/inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft6x06" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/exc7200" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7789h2" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Log" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/adv7533" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire640480" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/core" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mx25l512" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Invoking: MCU GCC Compiler
+C:\green-fox\week-08\day-02\gpio_led\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -DSTM32 -DSTM32F7 -DSTM32F746NGHx -DSTM32F746G_DISCO -DDEBUG -DSTM32F746xx -DUSE_HAL_DRIVER -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire480272" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q512a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/s5k5cag" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mfxstm32l152" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/device" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q128a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ts3510" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7735" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/rk043fn48h" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc/Legacy" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ov9655" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/otm8009a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/STM32746G-Discovery" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/Common" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/stmpe811" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/wm8994" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Fonts" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft5336" -I"C:/green-fox/week-08/day-02/gpio_led/inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft6x06" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/exc7200" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7789h2" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Log" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/adv7533" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire640480" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/core" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mx25l512" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Utilities/STM32746G-Discovery/stm32746g_discovery.d" -MT"Utilities/STM32746G-Discovery/stm32746g_discovery.o" -o "Utilities/STM32746G-Discovery/stm32746g_discovery.o" "../Utilities/STM32746G-Discovery/stm32746g_discovery.c"
+../src/main.c: In function 'main':
+../src/main.c:133:4: error: too few arguments to function 'BSP_LED_Off'
+    BSP_LED_Off();
+    ^~~~~~~~~~~
+In file included from ../src/main.c:11:0:
+C:/green-fox/week-08/day-02/gpio_led/Utilities/STM32746G-Discovery/stm32746g_discovery.h:309:11: note: declared here
+ void      BSP_LED_Off(Led_TypeDef Led);
+           ^~~~~~~~~~~
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+Finished building: ../Utilities/STM32746G-Discovery/stm32746g_discovery.c
+ 
+10:20:11 **** Incremental Build of configuration Debug for project UART2_project ****
+make -j2 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\green-fox\week-08\day-03\UART2_project\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -DSTM32 -DSTM32F7 -DSTM32F746NGHx -DSTM32F746G_DISCO -DDEBUG -DSTM32F746xx -DUSE_HAL_DRIVER -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ampire480272" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/n25q512a" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/s5k5cag" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/mfxstm32l152" -I"C:/green-fox/week-08/day-03/UART2_project/CMSIS/device" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/n25q128a" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ts3510" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/st7735" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/rk043fn48h" -I"C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/Legacy" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ov9655" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/otm8009a" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/STM32746G-Discovery" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/Common" -I"C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/stmpe811" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/wm8994" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Fonts" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ft5336" -I"C:/green-fox/week-08/day-03/UART2_project/inc" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ft6x06" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/exc7200" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/st7789h2" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Log" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/adv7533" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ampire640480" -I"C:/green-fox/week-08/day-03/UART2_project/CMSIS/core" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/mx25l512" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:71:34: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  HAL_UART_Transmit(&uart_handle, "szia\r\n", 6, 0xFFFF);
+                                  ^~~~~~~~~~
+In file included from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:376:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_uart.h:1137:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~~
+../src/main.c:80:14: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness [-Wpointer-sign]
+   if (strcmp(pCommand, "on") == 0) {
+              ^~~~~~~~
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\stdio.h:29:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_def.h:48,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_rcc.h:45,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:240,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\string.h:36:6: note: expected 'const char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int  _EXFUN(strcmp,(const char *, const char *));
+      ^
+../src/main.c:83:21: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness [-Wpointer-sign]
+   } else if (strcmp(pCommand, "off") == 0) {
+                     ^~~~~~~~
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\stdio.h:29:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_def.h:48,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_rcc.h:45,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:240,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\string.h:36:6: note: expected 'const char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int  _EXFUN(strcmp,(const char *, const char *));
+      ^
+../src/main.c:86:21: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness [-Wpointer-sign]
+   } else if (strcmp(pCommand, "\0\0\0\0") == 0) {
+                     ^~~~~~~~
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\stdio.h:29:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_def.h:48,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_rcc.h:45,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:240,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\string.h:36:6: note: expected 'const char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int  _EXFUN(strcmp,(const char *, const char *));
+      ^
+Finished building: ../src/main.c
+ 
+Building target: UART2_project.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -T"C:/green-fox/week-08/day-03/UART2_project/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "UART2_project.elf" @"objects.list"   -lm
+Finished building target: UART2_project.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "UART2_project.elf" "UART2_project.bin"
+arm-none-eabi-size "UART2_project.elf"
+   text	   data	    bss	    dec	    hex	filename
+  17628	   2160	   1804	  21592	   5458	UART2_project.elf
+ 
+10:20:20 **** Incremental Build of configuration Debug for project UART_project ****
+make -j2 all 
+make: Nothing to be done for 'all'.
+10:20:23 **** Incremental Build of configuration Debug for project gpio_led ****
+make -j2 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+Building file: ../Utilities/STM32746G-Discovery/stm32746g_discovery_audio.c
+C:\green-fox\week-08\day-02\gpio_led\Debug
+Invoking: MCU GCC Compiler
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -DSTM32 -DSTM32F7 -DSTM32F746NGHx -DSTM32F746G_DISCO -DDEBUG -DSTM32F746xx -DUSE_HAL_DRIVER -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire480272" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q512a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/s5k5cag" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mfxstm32l152" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/device" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q128a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ts3510" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7735" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/rk043fn48h" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc/Legacy" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ov9655" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/otm8009a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/STM32746G-Discovery" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/Common" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/stmpe811" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/wm8994" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Fonts" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft5336" -I"C:/green-fox/week-08/day-02/gpio_led/inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft6x06" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/exc7200" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7789h2" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Log" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/adv7533" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire640480" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/core" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mx25l512" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+C:\green-fox\week-08\day-02\gpio_led\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -DSTM32 -DSTM32F7 -DSTM32F746NGHx -DSTM32F746G_DISCO -DDEBUG -DSTM32F746xx -DUSE_HAL_DRIVER -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire480272" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q512a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/s5k5cag" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mfxstm32l152" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/device" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q128a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ts3510" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7735" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/rk043fn48h" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc/Legacy" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ov9655" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/otm8009a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/STM32746G-Discovery" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/Common" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/stmpe811" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/wm8994" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Fonts" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft5336" -I"C:/green-fox/week-08/day-02/gpio_led/inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft6x06" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/exc7200" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7789h2" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Log" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/adv7533" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire640480" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/core" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mx25l512" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Utilities/STM32746G-Discovery/stm32746g_discovery_audio.d" -MT"Utilities/STM32746G-Discovery/stm32746g_discovery_audio.o" -o "Utilities/STM32746G-Discovery/stm32746g_discovery_audio.o" "../Utilities/STM32746G-Discovery/stm32746g_discovery_audio.c"
+../src/main.c: In function 'main':
+../src/main.c:133:4: error: too few arguments to function 'BSP_LED_Off'
+    BSP_LED_Off();
+    ^~~~~~~~~~~
+In file included from ../src/main.c:11:0:
+C:/green-fox/week-08/day-02/gpio_led/Utilities/STM32746G-Discovery/stm32746g_discovery.h:309:11: note: declared here
+ void      BSP_LED_Off(Led_TypeDef Led);
+           ^~~~~~~~~~~
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+Finished building: ../Utilities/STM32746G-Discovery/stm32746g_discovery_audio.c
+ 
+10:20:34 **** Incremental Build of configuration Debug for project UART2_project ****
+make -j2 all 
+make: Nothing to be done for 'all'.
+10:26:59 **** Incremental Build of configuration Debug for project UART2_project ****
+make -j2 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\green-fox\week-08\day-03\UART2_project\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -DSTM32 -DSTM32F7 -DSTM32F746NGHx -DSTM32F746G_DISCO -DDEBUG -DSTM32F746xx -DUSE_HAL_DRIVER -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ampire480272" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/n25q512a" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/s5k5cag" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/mfxstm32l152" -I"C:/green-fox/week-08/day-03/UART2_project/CMSIS/device" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/n25q128a" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ts3510" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/st7735" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/rk043fn48h" -I"C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/Legacy" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ov9655" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/otm8009a" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/STM32746G-Discovery" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/Common" -I"C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/stmpe811" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/wm8994" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Fonts" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ft5336" -I"C:/green-fox/week-08/day-03/UART2_project/inc" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ft6x06" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/exc7200" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/st7789h2" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Log" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/adv7533" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ampire640480" -I"C:/green-fox/week-08/day-03/UART2_project/CMSIS/core" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/mx25l512" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:71:34: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  HAL_UART_Transmit(&uart_handle, "szia\r\n", 6, 0xFFFF);
+                                  ^~~~~~~~~~
+In file included from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:376:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_uart.h:1137:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~~
+../src/main.c:72:11: warning: format '%d' expects a matching 'int' argument [-Wformat=]
+  printf("%d4322\n");
+          ~^
+../src/main.c:80:14: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness [-Wpointer-sign]
+   if (strcmp(pCommand, "on") == 0) {
+              ^~~~~~~~
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\stdio.h:29:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_def.h:48,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_rcc.h:45,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:240,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\string.h:36:6: note: expected 'const char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int  _EXFUN(strcmp,(const char *, const char *));
+      ^
+../src/main.c:83:21: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness [-Wpointer-sign]
+   } else if (strcmp(pCommand, "off") == 0) {
+                     ^~~~~~~~
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\stdio.h:29:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_def.h:48,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_rcc.h:45,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:240,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\string.h:36:6: note: expected 'const char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int  _EXFUN(strcmp,(const char *, const char *));
+      ^
+../src/main.c:86:21: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness [-Wpointer-sign]
+   } else if (strcmp(pCommand, "\0\0\0\0") == 0) {
+                     ^~~~~~~~
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\stdio.h:29:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_def.h:48,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_rcc.h:45,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:240,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\string.h:36:6: note: expected 'const char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int  _EXFUN(strcmp,(const char *, const char *));
+      ^
+Finished building: ../src/main.c
+ 
+Building target: UART2_project.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -T"C:/green-fox/week-08/day-03/UART2_project/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "UART2_project.elf" @"objects.list"   -lm
+Finished building target: UART2_project.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "UART2_project.elf" "UART2_project.bin"
+arm-none-eabi-size "UART2_project.elf"
+   text	   data	    bss	    dec	    hex	filename
+  32336	   2524	   1800	  36660	   8f34	UART2_project.elf
+ 
+10:27:06 **** Incremental Build of configuration Debug for project UART_project ****
+make -j2 all 
+make: Nothing to be done for 'all'.
+10:27:08 **** Incremental Build of configuration Debug for project gpio_led ****
+make -j2 all 
+Building file: ../src/main.c
+Building file: ../Utilities/STM32746G-Discovery/stm32746g_discovery_camera.c
+Invoking: MCU GCC Compiler
+C:\green-fox\week-08\day-02\gpio_led\Debug
+Invoking: MCU GCC Compiler
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -DSTM32 -DSTM32F7 -DSTM32F746NGHx -DSTM32F746G_DISCO -DDEBUG -DSTM32F746xx -DUSE_HAL_DRIVER -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire480272" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q512a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/s5k5cag" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mfxstm32l152" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/device" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q128a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ts3510" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7735" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/rk043fn48h" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc/Legacy" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ov9655" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/otm8009a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/STM32746G-Discovery" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/Common" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/stmpe811" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/wm8994" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Fonts" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft5336" -I"C:/green-fox/week-08/day-02/gpio_led/inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft6x06" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/exc7200" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7789h2" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Log" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/adv7533" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire640480" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/core" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mx25l512" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+C:\green-fox\week-08\day-02\gpio_led\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -DSTM32 -DSTM32F7 -DSTM32F746NGHx -DSTM32F746G_DISCO -DDEBUG -DSTM32F746xx -DUSE_HAL_DRIVER -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire480272" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q512a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/s5k5cag" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mfxstm32l152" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/device" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q128a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ts3510" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7735" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/rk043fn48h" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc/Legacy" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ov9655" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/otm8009a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/STM32746G-Discovery" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/Common" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/stmpe811" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/wm8994" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Fonts" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft5336" -I"C:/green-fox/week-08/day-02/gpio_led/inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft6x06" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/exc7200" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7789h2" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Log" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/adv7533" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire640480" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/core" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mx25l512" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Utilities/STM32746G-Discovery/stm32746g_discovery_camera.d" -MT"Utilities/STM32746G-Discovery/stm32746g_discovery_camera.o" -o "Utilities/STM32746G-Discovery/stm32746g_discovery_camera.o" "../Utilities/STM32746G-Discovery/stm32746g_discovery_camera.c"
+../src/main.c: In function 'main':
+../src/main.c:133:4: error: too few arguments to function 'BSP_LED_Off'
+    BSP_LED_Off();
+    ^~~~~~~~~~~
+In file included from ../src/main.c:11:0:
+C:/green-fox/week-08/day-02/gpio_led/Utilities/STM32746G-Discovery/stm32746g_discovery.h:309:11: note: declared here
+ void      BSP_LED_Off(Led_TypeDef Led);
+           ^~~~~~~~~~~
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+Finished building: ../Utilities/STM32746G-Discovery/stm32746g_discovery_camera.c
+ 
+10:27:18 **** Incremental Build of configuration Debug for project UART2_project ****
+make -j2 all 
+make: Nothing to be done for 'all'.
+10:28:39 **** Incremental Build of configuration Debug for project UART2_project ****
+make -j2 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\green-fox\week-08\day-03\UART2_project\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -DSTM32 -DSTM32F7 -DSTM32F746NGHx -DSTM32F746G_DISCO -DDEBUG -DSTM32F746xx -DUSE_HAL_DRIVER -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ampire480272" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/n25q512a" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/s5k5cag" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/mfxstm32l152" -I"C:/green-fox/week-08/day-03/UART2_project/CMSIS/device" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/n25q128a" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ts3510" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/st7735" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/rk043fn48h" -I"C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/Legacy" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ov9655" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/otm8009a" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/STM32746G-Discovery" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/Common" -I"C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/stmpe811" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/wm8994" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Fonts" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ft5336" -I"C:/green-fox/week-08/day-03/UART2_project/inc" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ft6x06" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/exc7200" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/st7789h2" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Log" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/adv7533" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ampire640480" -I"C:/green-fox/week-08/day-03/UART2_project/CMSIS/core" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/mx25l512" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:71:34: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  HAL_UART_Transmit(&uart_handle, "szia\r\n", 6, 0xFFFF);
+                                  ^~~~~~~~~~
+In file included from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:376:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_uart.h:1137:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~~
+../src/main.c:72:11: warning: format '%d' expects a matching 'int' argument [-Wformat=]
+  printf("%d\n 4322");
+          ~^
+../src/main.c:80:14: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness [-Wpointer-sign]
+   if (strcmp(pCommand, "on") == 0) {
+              ^~~~~~~~
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\stdio.h:29:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_def.h:48,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_rcc.h:45,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:240,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\string.h:36:6: note: expected 'const char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int  _EXFUN(strcmp,(const char *, const char *));
+      ^
+../src/main.c:83:21: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness [-Wpointer-sign]
+   } else if (strcmp(pCommand, "off") == 0) {
+                     ^~~~~~~~
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\stdio.h:29:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_def.h:48,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_rcc.h:45,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:240,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\string.h:36:6: note: expected 'const char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int  _EXFUN(strcmp,(const char *, const char *));
+      ^
+../src/main.c:86:21: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness [-Wpointer-sign]
+   } else if (strcmp(pCommand, "\0\0\0\0") == 0) {
+                     ^~~~~~~~
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\stdio.h:29:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_def.h:48,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_rcc.h:45,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:240,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\string.h:36:6: note: expected 'const char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int  _EXFUN(strcmp,(const char *, const char *));
+      ^
+Finished building: ../src/main.c
+ 
+Building target: UART2_project.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -T"C:/green-fox/week-08/day-03/UART2_project/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "UART2_project.elf" @"objects.list"   -lm
+Finished building target: UART2_project.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "UART2_project.elf" "UART2_project.bin"
+arm-none-eabi-size "UART2_project.elf"
+   text	   data	    bss	    dec	    hex	filename
+  32344	   2524	   1800	  36668	   8f3c	UART2_project.elf
+ 
+10:28:45 **** Incremental Build of configuration Debug for project UART_project ****
+make -j2 all 
+make: Nothing to be done for 'all'.
+10:28:48 **** Incremental Build of configuration Debug for project gpio_led ****
+make -j2 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+Building file: ../Utilities/STM32746G-Discovery/stm32746g_discovery_eeprom.c
+C:\green-fox\week-08\day-02\gpio_led\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -DSTM32 -DSTM32F7 -DSTM32F746NGHx -DSTM32F746G_DISCO -DDEBUG -DSTM32F746xx -DUSE_HAL_DRIVER -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire480272" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q512a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/s5k5cag" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mfxstm32l152" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/device" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q128a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ts3510" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7735" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/rk043fn48h" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc/Legacy" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ov9655" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/otm8009a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/STM32746G-Discovery" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/Common" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/stmpe811" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/wm8994" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Fonts" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft5336" -I"C:/green-fox/week-08/day-02/gpio_led/inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft6x06" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/exc7200" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7789h2" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Log" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/adv7533" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire640480" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/core" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mx25l512" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Invoking: MCU GCC Compiler
+C:\green-fox\week-08\day-02\gpio_led\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -DSTM32 -DSTM32F7 -DSTM32F746NGHx -DSTM32F746G_DISCO -DDEBUG -DSTM32F746xx -DUSE_HAL_DRIVER -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire480272" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q512a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/s5k5cag" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mfxstm32l152" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/device" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q128a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ts3510" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7735" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/rk043fn48h" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc/Legacy" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ov9655" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/otm8009a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/STM32746G-Discovery" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/Common" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/stmpe811" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/wm8994" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Fonts" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft5336" -I"C:/green-fox/week-08/day-02/gpio_led/inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft6x06" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/exc7200" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7789h2" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Log" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/adv7533" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire640480" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/core" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mx25l512" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Utilities/STM32746G-Discovery/stm32746g_discovery_eeprom.d" -MT"Utilities/STM32746G-Discovery/stm32746g_discovery_eeprom.o" -o "Utilities/STM32746G-Discovery/stm32746g_discovery_eeprom.o" "../Utilities/STM32746G-Discovery/stm32746g_discovery_eeprom.c"
+../src/main.c: In function 'main':
+../src/main.c:133:4: error: too few arguments to function 'BSP_LED_Off'
+    BSP_LED_Off();
+    ^~~~~~~~~~~
+In file included from ../src/main.c:11:0:
+C:/green-fox/week-08/day-02/gpio_led/Utilities/STM32746G-Discovery/stm32746g_discovery.h:309:11: note: declared here
+ void      BSP_LED_Off(Led_TypeDef Led);
+           ^~~~~~~~~~~
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+Finished building: ../Utilities/STM32746G-Discovery/stm32746g_discovery_eeprom.c
+ 
+10:28:58 **** Incremental Build of configuration Debug for project UART2_project ****
+make -j2 all 
+make: Nothing to be done for 'all'.
+10:32:28 **** Incremental Build of configuration Debug for project UART2_project ****
+make -j2 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\green-fox\week-08\day-03\UART2_project\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -DSTM32 -DSTM32F7 -DSTM32F746NGHx -DSTM32F746G_DISCO -DDEBUG -DSTM32F746xx -DUSE_HAL_DRIVER -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ampire480272" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/n25q512a" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/s5k5cag" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/mfxstm32l152" -I"C:/green-fox/week-08/day-03/UART2_project/CMSIS/device" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/n25q128a" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ts3510" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/st7735" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/rk043fn48h" -I"C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/Legacy" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ov9655" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/otm8009a" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/STM32746G-Discovery" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/Common" -I"C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/stmpe811" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/wm8994" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Fonts" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ft5336" -I"C:/green-fox/week-08/day-03/UART2_project/inc" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ft6x06" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/exc7200" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/st7789h2" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Log" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/adv7533" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ampire640480" -I"C:/green-fox/week-08/day-03/UART2_project/CMSIS/core" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/mx25l512" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:71:34: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  HAL_UART_Transmit(&uart_handle, "szia\r\n", 6, 0xFFFF);
+                                  ^~~~~~~~~~
+In file included from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:376:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_uart.h:1137:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~~
+../src/main.c:80:14: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness [-Wpointer-sign]
+   if (strcmp(pCommand, "on") == 0) {
+              ^~~~~~~~
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\stdio.h:29:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_def.h:48,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_rcc.h:45,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:240,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\string.h:36:6: note: expected 'const char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int  _EXFUN(strcmp,(const char *, const char *));
+      ^
+../src/main.c:83:21: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness [-Wpointer-sign]
+   } else if (strcmp(pCommand, "off") == 0) {
+                     ^~~~~~~~
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\stdio.h:29:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_def.h:48,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_rcc.h:45,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:240,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\string.h:36:6: note: expected 'const char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int  _EXFUN(strcmp,(const char *, const char *));
+      ^
+../src/main.c:86:21: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness [-Wpointer-sign]
+   } else if (strcmp(pCommand, "\0\0\0\0") == 0) {
+                     ^~~~~~~~
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\stdio.h:29:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_def.h:48,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_rcc.h:45,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:240,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\string.h:36:6: note: expected 'const char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int  _EXFUN(strcmp,(const char *, const char *));
+      ^
+Finished building: ../src/main.c
+ 
+Building target: UART2_project.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -T"C:/green-fox/week-08/day-03/UART2_project/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "UART2_project.elf" @"objects.list"   -lm
+Finished building target: UART2_project.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "UART2_project.elf" "UART2_project.bin"
+arm-none-eabi-size "UART2_project.elf"
+   text	   data	    bss	    dec	    hex	filename
+  32336	   2524	   1800	  36660	   8f34	UART2_project.elf
+ 
+10:32:40 **** Incremental Build of configuration Debug for project UART_project ****
+make -j2 all 
+make: Nothing to be done for 'all'.
+10:32:44 **** Incremental Build of configuration Debug for project gpio_led ****
+make -j2 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+Building file: ../Utilities/STM32746G-Discovery/stm32746g_discovery_lcd.c
+C:\green-fox\week-08\day-02\gpio_led\Debug
+Invoking: MCU GCC Compiler
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -DSTM32 -DSTM32F7 -DSTM32F746NGHx -DSTM32F746G_DISCO -DDEBUG -DSTM32F746xx -DUSE_HAL_DRIVER -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire480272" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q512a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/s5k5cag" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mfxstm32l152" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/device" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q128a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ts3510" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7735" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/rk043fn48h" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc/Legacy" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ov9655" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/otm8009a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/STM32746G-Discovery" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/Common" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/stmpe811" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/wm8994" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Fonts" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft5336" -I"C:/green-fox/week-08/day-02/gpio_led/inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft6x06" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/exc7200" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7789h2" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Log" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/adv7533" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire640480" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/core" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mx25l512" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+C:\green-fox\week-08\day-02\gpio_led\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -DSTM32 -DSTM32F7 -DSTM32F746NGHx -DSTM32F746G_DISCO -DDEBUG -DSTM32F746xx -DUSE_HAL_DRIVER -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire480272" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q512a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/s5k5cag" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mfxstm32l152" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/device" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q128a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ts3510" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7735" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/rk043fn48h" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc/Legacy" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ov9655" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/otm8009a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/STM32746G-Discovery" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/Common" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/stmpe811" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/wm8994" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Fonts" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft5336" -I"C:/green-fox/week-08/day-02/gpio_led/inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft6x06" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/exc7200" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7789h2" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Log" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/adv7533" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire640480" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/core" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mx25l512" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Utilities/STM32746G-Discovery/stm32746g_discovery_lcd.d" -MT"Utilities/STM32746G-Discovery/stm32746g_discovery_lcd.o" -o "Utilities/STM32746G-Discovery/stm32746g_discovery_lcd.o" "../Utilities/STM32746G-Discovery/stm32746g_discovery_lcd.c"
+../src/main.c: In function 'main':
+../src/main.c:133:4: error: too few arguments to function 'BSP_LED_Off'
+    BSP_LED_Off();
+    ^~~~~~~~~~~
+In file included from ../src/main.c:11:0:
+C:/green-fox/week-08/day-02/gpio_led/Utilities/STM32746G-Discovery/stm32746g_discovery.h:309:11: note: declared here
+ void      BSP_LED_Off(Led_TypeDef Led);
+           ^~~~~~~~~~~
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+Finished building: ../Utilities/STM32746G-Discovery/stm32746g_discovery_lcd.c
+ 
+10:33:01 **** Incremental Build of configuration Debug for project UART2_project ****
+make -j2 all 
+make: Nothing to be done for 'all'.
+11:32:14 **** Incremental Build of configuration Debug for project UART2_project ****
+make -j2 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\green-fox\week-08\day-03\UART2_project\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -DSTM32 -DSTM32F7 -DSTM32F746NGHx -DSTM32F746G_DISCO -DDEBUG -DSTM32F746xx -DUSE_HAL_DRIVER -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ampire480272" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/n25q512a" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/s5k5cag" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/mfxstm32l152" -I"C:/green-fox/week-08/day-03/UART2_project/CMSIS/device" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/n25q128a" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ts3510" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/st7735" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/rk043fn48h" -I"C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/Legacy" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ov9655" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/otm8009a" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/STM32746G-Discovery" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/Common" -I"C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/stmpe811" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/wm8994" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Fonts" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ft5336" -I"C:/green-fox/week-08/day-03/UART2_project/inc" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ft6x06" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/exc7200" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/st7789h2" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Log" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/adv7533" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ampire640480" -I"C:/green-fox/week-08/day-03/UART2_project/CMSIS/core" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/mx25l512" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:71:34: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  HAL_UART_Transmit(&uart_handle, "szia\r\n", 6, 0xFFFF);
+                                  ^~~~~~~~~~
+In file included from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:376:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_uart.h:1137:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~~
+../src/main.c:89:15: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness [-Wpointer-sign]
+     if(strcmp(pCommandBuffer, "on") == 0){
+               ^~~~~~~~~~~~~~
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\stdio.h:29:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_def.h:48,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_rcc.h:45,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:240,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\string.h:36:6: note: expected 'const char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int  _EXFUN(strcmp,(const char *, const char *));
+      ^
+../src/main.c:91:23: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness [-Wpointer-sign]
+     } else if (strcmp(pCommand, "off") == 0){
+                       ^~~~~~~~
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\stdio.h:29:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_def.h:48,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_rcc.h:45,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:240,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\string.h:36:6: note: expected 'const char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int  _EXFUN(strcmp,(const char *, const char *));
+      ^
+Finished building: ../src/main.c
+ 
+Building target: UART2_project.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -T"C:/green-fox/week-08/day-03/UART2_project/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "UART2_project.elf" @"objects.list"   -lm
+Finished building target: UART2_project.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "UART2_project.elf" "UART2_project.bin"
+arm-none-eabi-size "UART2_project.elf"
+   text	   data	    bss	    dec	    hex	filename
+  32384	   2524	   1800	  36708	   8f64	UART2_project.elf
+ 
+11:32:21 **** Incremental Build of configuration Debug for project UART_project ****
+make -j2 all 
+make: Nothing to be done for 'all'.
+11:32:23 **** Incremental Build of configuration Debug for project gpio_led ****
+make -j2 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\green-fox\week-08\day-02\gpio_led\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -DSTM32 -DSTM32F7 -DSTM32F746NGHx -DSTM32F746G_DISCO -DDEBUG -DSTM32F746xx -DUSE_HAL_DRIVER -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire480272" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q512a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/s5k5cag" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mfxstm32l152" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/device" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q128a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ts3510" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7735" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/rk043fn48h" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc/Legacy" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ov9655" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/otm8009a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/STM32746G-Discovery" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/Common" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/stmpe811" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/wm8994" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Fonts" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft5336" -I"C:/green-fox/week-08/day-02/gpio_led/inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft6x06" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/exc7200" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7789h2" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Log" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/adv7533" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire640480" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/core" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mx25l512" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Building file: ../Utilities/STM32746G-Discovery/stm32746g_discovery_qspi.c
+Invoking: MCU GCC Compiler
+C:\green-fox\week-08\day-02\gpio_led\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -DSTM32 -DSTM32F7 -DSTM32F746NGHx -DSTM32F746G_DISCO -DDEBUG -DSTM32F746xx -DUSE_HAL_DRIVER -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire480272" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q512a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/s5k5cag" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mfxstm32l152" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/device" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q128a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ts3510" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7735" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/rk043fn48h" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc/Legacy" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ov9655" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/otm8009a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/STM32746G-Discovery" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/Common" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/stmpe811" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/wm8994" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Fonts" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft5336" -I"C:/green-fox/week-08/day-02/gpio_led/inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft6x06" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/exc7200" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7789h2" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Log" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/adv7533" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire640480" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/core" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mx25l512" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Utilities/STM32746G-Discovery/stm32746g_discovery_qspi.d" -MT"Utilities/STM32746G-Discovery/stm32746g_discovery_qspi.o" -o "Utilities/STM32746G-Discovery/stm32746g_discovery_qspi.o" "../Utilities/STM32746G-Discovery/stm32746g_discovery_qspi.c"
+../src/main.c: In function 'main':
+../src/main.c:133:4: error: too few arguments to function 'BSP_LED_Off'
+    BSP_LED_Off();
+    ^~~~~~~~~~~
+In file included from ../src/main.c:11:0:
+C:/green-fox/week-08/day-02/gpio_led/Utilities/STM32746G-Discovery/stm32746g_discovery.h:309:11: note: declared here
+ void      BSP_LED_Off(Led_TypeDef Led);
+           ^~~~~~~~~~~
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+Finished building: ../Utilities/STM32746G-Discovery/stm32746g_discovery_qspi.c
+ 
+11:32:31 **** Incremental Build of configuration Debug for project UART2_project ****
+make -j2 all 
+make: Nothing to be done for 'all'.
+11:37:00 **** Incremental Build of configuration Debug for project UART2_project ****
+make -j2 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\green-fox\week-08\day-03\UART2_project\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -DSTM32 -DSTM32F7 -DSTM32F746NGHx -DSTM32F746G_DISCO -DDEBUG -DSTM32F746xx -DUSE_HAL_DRIVER -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ampire480272" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/n25q512a" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/s5k5cag" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/mfxstm32l152" -I"C:/green-fox/week-08/day-03/UART2_project/CMSIS/device" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/n25q128a" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ts3510" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/st7735" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/rk043fn48h" -I"C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/Legacy" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ov9655" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/otm8009a" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/STM32746G-Discovery" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/Common" -I"C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/stmpe811" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/wm8994" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Fonts" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ft5336" -I"C:/green-fox/week-08/day-03/UART2_project/inc" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ft6x06" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/exc7200" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/st7789h2" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Log" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/adv7533" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ampire640480" -I"C:/green-fox/week-08/day-03/UART2_project/CMSIS/core" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/mx25l512" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:71:34: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  HAL_UART_Transmit(&uart_handle, "szia\r\n", 6, 0xFFFF);
+                                  ^~~~~~~~~~
+In file included from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:376:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_uart.h:1137:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~~
+../src/main.c:89:15: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness [-Wpointer-sign]
+     if(strcmp(pCommandBuffer, "on") == 0){
+               ^~~~~~~~~~~~~~
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\stdio.h:29:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_def.h:48,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_rcc.h:45,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:240,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\string.h:36:6: note: expected 'const char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int  _EXFUN(strcmp,(const char *, const char *));
+      ^
+../src/main.c:91:23: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness [-Wpointer-sign]
+     } else if (strcmp(pCommandBuffer, "off") == 0){
+                       ^~~~~~~~~~~~~~
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\stdio.h:29:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_def.h:48,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_rcc.h:45,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:240,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\string.h:36:6: note: expected 'const char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int  _EXFUN(strcmp,(const char *, const char *));
+      ^
+../src/main.c:74:10: warning: unused variable 'pCommand' [-Wunused-variable]
+  uint8_t pCommand[4] = {0};
+          ^~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: UART2_project.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -T"C:/green-fox/week-08/day-03/UART2_project/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "UART2_project.elf" @"objects.list"   -lm
+Finished building target: UART2_project.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "UART2_project.elf" "UART2_project.bin"
+arm-none-eabi-size "UART2_project.elf"
+   text	   data	    bss	    dec	    hex	filename
+  32384	   2524	   1800	  36708	   8f64	UART2_project.elf
+ 
+11:37:08 **** Incremental Build of configuration Debug for project UART_project ****
+make -j2 all 
+make: Nothing to be done for 'all'.
+11:37:10 **** Incremental Build of configuration Debug for project gpio_led ****
+make -j2 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+Building file: ../Utilities/STM32746G-Discovery/stm32746g_discovery_sd.c
+C:\green-fox\week-08\day-02\gpio_led\Debug
+Invoking: MCU GCC Compiler
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -DSTM32 -DSTM32F7 -DSTM32F746NGHx -DSTM32F746G_DISCO -DDEBUG -DSTM32F746xx -DUSE_HAL_DRIVER -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire480272" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q512a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/s5k5cag" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mfxstm32l152" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/device" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q128a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ts3510" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7735" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/rk043fn48h" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc/Legacy" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ov9655" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/otm8009a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/STM32746G-Discovery" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/Common" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/stmpe811" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/wm8994" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Fonts" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft5336" -I"C:/green-fox/week-08/day-02/gpio_led/inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft6x06" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/exc7200" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7789h2" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Log" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/adv7533" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire640480" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/core" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mx25l512" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+C:\green-fox\week-08\day-02\gpio_led\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -DSTM32 -DSTM32F7 -DSTM32F746NGHx -DSTM32F746G_DISCO -DDEBUG -DSTM32F746xx -DUSE_HAL_DRIVER -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire480272" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q512a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/s5k5cag" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mfxstm32l152" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/device" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q128a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ts3510" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7735" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/rk043fn48h" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc/Legacy" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ov9655" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/otm8009a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/STM32746G-Discovery" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/Common" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/stmpe811" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/wm8994" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Fonts" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft5336" -I"C:/green-fox/week-08/day-02/gpio_led/inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft6x06" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/exc7200" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7789h2" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Log" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/adv7533" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire640480" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/core" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mx25l512" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Utilities/STM32746G-Discovery/stm32746g_discovery_sd.d" -MT"Utilities/STM32746G-Discovery/stm32746g_discovery_sd.o" -o "Utilities/STM32746G-Discovery/stm32746g_discovery_sd.o" "../Utilities/STM32746G-Discovery/stm32746g_discovery_sd.c"
+../src/main.c: In function 'main':
+../src/main.c:133:4: error: too few arguments to function 'BSP_LED_Off'
+    BSP_LED_Off();
+    ^~~~~~~~~~~
+In file included from ../src/main.c:11:0:
+C:/green-fox/week-08/day-02/gpio_led/Utilities/STM32746G-Discovery/stm32746g_discovery.h:309:11: note: declared here
+ void      BSP_LED_Off(Led_TypeDef Led);
+           ^~~~~~~~~~~
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+Finished building: ../Utilities/STM32746G-Discovery/stm32746g_discovery_sd.c
+ 
+11:37:18 **** Incremental Build of configuration Debug for project UART2_project ****
+make -j2 all 
+make: Nothing to be done for 'all'.
+11:45:58 **** Incremental Build of configuration Debug for project UART2_project ****
+make -j2 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\green-fox\week-08\day-03\UART2_project\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -DSTM32 -DSTM32F7 -DSTM32F746NGHx -DSTM32F746G_DISCO -DDEBUG -DSTM32F746xx -DUSE_HAL_DRIVER -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ampire480272" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/n25q512a" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/s5k5cag" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/mfxstm32l152" -I"C:/green-fox/week-08/day-03/UART2_project/CMSIS/device" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/n25q128a" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ts3510" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/st7735" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/rk043fn48h" -I"C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/Legacy" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ov9655" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/otm8009a" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/STM32746G-Discovery" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/Common" -I"C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/stmpe811" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/wm8994" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Fonts" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ft5336" -I"C:/green-fox/week-08/day-03/UART2_project/inc" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ft6x06" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/exc7200" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/st7789h2" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Log" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/adv7533" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ampire640480" -I"C:/green-fox/week-08/day-03/UART2_project/CMSIS/core" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/mx25l512" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:71:34: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  HAL_UART_Transmit(&uart_handle, "szia\r\n", 6, 0xFFFF);
+                                  ^~~~~~~~~~
+In file included from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:376:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_uart.h:1137:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~~
+../src/main.c:89:15: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness [-Wpointer-sign]
+     if(strcmp(pCommandBuffer, "on") == 0){
+               ^~~~~~~~~~~~~~
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\stdio.h:29:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_def.h:48,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_rcc.h:45,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:240,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\string.h:36:6: note: expected 'const char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int  _EXFUN(strcmp,(const char *, const char *));
+      ^
+../src/main.c:91:23: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness [-Wpointer-sign]
+     } else if (strcmp(pCommandBuffer, "off") == 0){
+                       ^~~~~~~~~~~~~~
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\stdio.h:29:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_def.h:48,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_rcc.h:45,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:240,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\string.h:36:6: note: expected 'const char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int  _EXFUN(strcmp,(const char *, const char *));
+      ^
+../src/main.c:74:10: warning: unused variable 'pCommand' [-Wunused-variable]
+  uint8_t pCommand[4] = {0};
+          ^~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: UART2_project.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -T"C:/green-fox/week-08/day-03/UART2_project/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "UART2_project.elf" @"objects.list"   -lm
+Finished building target: UART2_project.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "UART2_project.elf" "UART2_project.bin"
+arm-none-eabi-size "UART2_project.elf"
+   text	   data	    bss	    dec	    hex	filename
+  32488	   2524	   1800	  36812	   8fcc	UART2_project.elf
+ 
+11:46:04 **** Incremental Build of configuration Debug for project UART_project ****
+make -j2 all 
+make: Nothing to be done for 'all'.
+11:46:07 **** Incremental Build of configuration Debug for project gpio_led ****
+make -j2 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+Building file: ../Utilities/STM32746G-Discovery/stm32746g_discovery_sdram.c
+C:\green-fox\week-08\day-02\gpio_led\Debug
+Invoking: MCU GCC Compiler
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -DSTM32 -DSTM32F7 -DSTM32F746NGHx -DSTM32F746G_DISCO -DDEBUG -DSTM32F746xx -DUSE_HAL_DRIVER -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire480272" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q512a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/s5k5cag" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mfxstm32l152" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/device" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q128a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ts3510" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7735" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/rk043fn48h" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc/Legacy" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ov9655" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/otm8009a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/STM32746G-Discovery" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/Common" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/stmpe811" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/wm8994" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Fonts" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft5336" -I"C:/green-fox/week-08/day-02/gpio_led/inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft6x06" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/exc7200" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7789h2" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Log" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/adv7533" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire640480" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/core" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mx25l512" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+C:\green-fox\week-08\day-02\gpio_led\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -DSTM32 -DSTM32F7 -DSTM32F746NGHx -DSTM32F746G_DISCO -DDEBUG -DSTM32F746xx -DUSE_HAL_DRIVER -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire480272" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q512a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/s5k5cag" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mfxstm32l152" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/device" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q128a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ts3510" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7735" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/rk043fn48h" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc/Legacy" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ov9655" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/otm8009a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/STM32746G-Discovery" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/Common" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/stmpe811" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/wm8994" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Fonts" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft5336" -I"C:/green-fox/week-08/day-02/gpio_led/inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft6x06" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/exc7200" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7789h2" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Log" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/adv7533" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire640480" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/core" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mx25l512" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Utilities/STM32746G-Discovery/stm32746g_discovery_sdram.d" -MT"Utilities/STM32746G-Discovery/stm32746g_discovery_sdram.o" -o "Utilities/STM32746G-Discovery/stm32746g_discovery_sdram.o" "../Utilities/STM32746G-Discovery/stm32746g_discovery_sdram.c"
+../src/main.c: In function 'main':
+../src/main.c:133:4: error: too few arguments to function 'BSP_LED_Off'
+    BSP_LED_Off();
+    ^~~~~~~~~~~
+In file included from ../src/main.c:11:0:
+C:/green-fox/week-08/day-02/gpio_led/Utilities/STM32746G-Discovery/stm32746g_discovery.h:309:11: note: declared here
+ void      BSP_LED_Off(Led_TypeDef Led);
+           ^~~~~~~~~~~
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+Finished building: ../Utilities/STM32746G-Discovery/stm32746g_discovery_sdram.c
+ 
+11:46:15 **** Incremental Build of configuration Debug for project UART2_project ****
+make -j2 all 
+make: Nothing to be done for 'all'.
+11:52:17 **** Incremental Build of configuration Debug for project UART2_project ****
+make -j2 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\green-fox\week-08\day-03\UART2_project\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -DSTM32 -DSTM32F7 -DSTM32F746NGHx -DSTM32F746G_DISCO -DDEBUG -DSTM32F746xx -DUSE_HAL_DRIVER -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ampire480272" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/n25q512a" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/s5k5cag" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/mfxstm32l152" -I"C:/green-fox/week-08/day-03/UART2_project/CMSIS/device" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/n25q128a" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ts3510" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/st7735" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/rk043fn48h" -I"C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/Legacy" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ov9655" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/otm8009a" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/STM32746G-Discovery" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/Common" -I"C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/stmpe811" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/wm8994" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Fonts" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ft5336" -I"C:/green-fox/week-08/day-03/UART2_project/inc" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ft6x06" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/exc7200" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/st7789h2" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Log" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/adv7533" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ampire640480" -I"C:/green-fox/week-08/day-03/UART2_project/CMSIS/core" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/mx25l512" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:71:34: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  HAL_UART_Transmit(&uart_handle, "szia\r\n", 6, 0xFFFF);
+                                  ^~~~~~~~~~
+In file included from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:376:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_uart.h:1137:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~~
+../src/main.c:89:15: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness [-Wpointer-sign]
+     if(strcmp(pCommandBuffer, "on") == 0){
+               ^~~~~~~~~~~~~~
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\stdio.h:29:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_def.h:48,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_rcc.h:45,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:240,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\string.h:36:6: note: expected 'const char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int  _EXFUN(strcmp,(const char *, const char *));
+      ^
+../src/main.c:91:23: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness [-Wpointer-sign]
+     } else if (strcmp(pCommandBuffer, "off") == 0){
+                       ^~~~~~~~~~~~~~
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\stdio.h:29:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_def.h:48,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_rcc.h:45,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:240,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\string.h:36:6: note: expected 'const char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int  _EXFUN(strcmp,(const char *, const char *));
+      ^
+../src/main.c:96:7: warning: implicit declaration of function 'HAL_DELAY'; did you mean 'HAL_Delay'? [-Wimplicit-function-declaration]
+       HAL_DELAY(500);
+       ^~~~~~~~~
+       HAL_Delay
+../src/main.c:74:10: warning: unused variable 'pCommand' [-Wunused-variable]
+  uint8_t pCommand[4] = {0};
+          ^~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: UART2_project.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -T"C:/green-fox/week-08/day-03/UART2_project/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "UART2_project.elf" @"objects.list"   -lm
+src/main.o: In function `main':
+C:\green-fox\week-08\day-03\UART2_project\Debug/../src/main.c:96: undefined reference to `HAL_DELAY'
+collect2.exe: error: ld returned 1 exit status
+makefile:51: recipe for target 'UART2_project.elf' failed
+make: *** [UART2_project.elf] Error 1
+11:52:23 **** Incremental Build of configuration Debug for project UART_project ****
+make -j2 all 
+make: Nothing to be done for 'all'.
+11:52:26 **** Incremental Build of configuration Debug for project gpio_led ****
+make -j2 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+Building file: ../Utilities/STM32746G-Discovery/stm32746g_discovery_ts.c
+C:\green-fox\week-08\day-02\gpio_led\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -DSTM32 -DSTM32F7 -DSTM32F746NGHx -DSTM32F746G_DISCO -DDEBUG -DSTM32F746xx -DUSE_HAL_DRIVER -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire480272" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q512a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/s5k5cag" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mfxstm32l152" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/device" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q128a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ts3510" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7735" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/rk043fn48h" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc/Legacy" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ov9655" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/otm8009a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/STM32746G-Discovery" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/Common" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/stmpe811" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/wm8994" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Fonts" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft5336" -I"C:/green-fox/week-08/day-02/gpio_led/inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft6x06" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/exc7200" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7789h2" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Log" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/adv7533" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire640480" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/core" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mx25l512" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Invoking: MCU GCC Compiler
+C:\green-fox\week-08\day-02\gpio_led\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -DSTM32 -DSTM32F7 -DSTM32F746NGHx -DSTM32F746G_DISCO -DDEBUG -DSTM32F746xx -DUSE_HAL_DRIVER -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire480272" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q512a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/s5k5cag" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mfxstm32l152" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/device" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q128a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ts3510" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7735" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/rk043fn48h" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc/Legacy" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ov9655" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/otm8009a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/STM32746G-Discovery" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/Common" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/stmpe811" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/wm8994" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Fonts" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft5336" -I"C:/green-fox/week-08/day-02/gpio_led/inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft6x06" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/exc7200" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7789h2" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Log" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/adv7533" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire640480" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/core" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mx25l512" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Utilities/STM32746G-Discovery/stm32746g_discovery_ts.d" -MT"Utilities/STM32746G-Discovery/stm32746g_discovery_ts.o" -o "Utilities/STM32746G-Discovery/stm32746g_discovery_ts.o" "../Utilities/STM32746G-Discovery/stm32746g_discovery_ts.c"
+../src/main.c: In function 'main':
+../src/main.c:133:4: error: too few arguments to function 'BSP_LED_Off'
+    BSP_LED_Off();
+    ^~~~~~~~~~~
+In file included from ../src/main.c:11:0:
+C:/green-fox/week-08/day-02/gpio_led/Utilities/STM32746G-Discovery/stm32746g_discovery.h:309:11: note: declared here
+ void      BSP_LED_Off(Led_TypeDef Led);
+           ^~~~~~~~~~~
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+Finished building: ../Utilities/STM32746G-Discovery/stm32746g_discovery_ts.c
+ 
+11:52:32 **** Incremental Build of configuration Debug for project UART2_project ****
+make -j2 all 
+Building target: UART2_project.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -T"C:/green-fox/week-08/day-03/UART2_project/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "UART2_project.elf" @"objects.list"   -lm
+src/main.o: In function `main':
+C:\green-fox\week-08\day-03\UART2_project\Debug/../src/main.c:96: undefined reference to `HAL_DELAY'
+collect2.exe: error: ld returned 1 exit status
+make: *** [UART2_project.elf] Error 1
+makefile:51: recipe for target 'UART2_project.elf' failed
+11:52:54 **** Incremental Build of configuration Debug for project UART2_project ****
+make -j2 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\green-fox\week-08\day-03\UART2_project\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -DSTM32 -DSTM32F7 -DSTM32F746NGHx -DSTM32F746G_DISCO -DDEBUG -DSTM32F746xx -DUSE_HAL_DRIVER -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ampire480272" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/n25q512a" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/s5k5cag" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/mfxstm32l152" -I"C:/green-fox/week-08/day-03/UART2_project/CMSIS/device" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/n25q128a" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ts3510" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/st7735" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/rk043fn48h" -I"C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/Legacy" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ov9655" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/otm8009a" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/STM32746G-Discovery" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/Common" -I"C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/stmpe811" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/wm8994" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Fonts" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ft5336" -I"C:/green-fox/week-08/day-03/UART2_project/inc" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ft6x06" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/exc7200" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/st7789h2" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Log" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/adv7533" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ampire640480" -I"C:/green-fox/week-08/day-03/UART2_project/CMSIS/core" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/mx25l512" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:71:34: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  HAL_UART_Transmit(&uart_handle, "szia\r\n", 6, 0xFFFF);
+                                  ^~~~~~~~~~
+In file included from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:376:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_uart.h:1137:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~~
+../src/main.c:89:15: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness [-Wpointer-sign]
+     if(strcmp(pCommandBuffer, "on") == 0){
+               ^~~~~~~~~~~~~~
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\stdio.h:29:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_def.h:48,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_rcc.h:45,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:240,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\string.h:36:6: note: expected 'const char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int  _EXFUN(strcmp,(const char *, const char *));
+      ^
+../src/main.c:91:23: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness [-Wpointer-sign]
+     } else if (strcmp(pCommandBuffer, "off") == 0){
+                       ^~~~~~~~~~~~~~
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\stdio.h:29:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_def.h:48,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_rcc.h:45,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:240,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\string.h:36:6: note: expected 'const char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int  _EXFUN(strcmp,(const char *, const char *));
+      ^
+../src/main.c:74:10: warning: unused variable 'pCommand' [-Wunused-variable]
+  uint8_t pCommand[4] = {0};
+          ^~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: UART2_project.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -T"C:/green-fox/week-08/day-03/UART2_project/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "UART2_project.elf" @"objects.list"   -lm
+Finished building target: UART2_project.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "UART2_project.elf" "UART2_project.bin"
+arm-none-eabi-size "UART2_project.elf"
+   text	   data	    bss	    dec	    hex	filename
+  32560	   2524	   1800	  36884	   9014	UART2_project.elf
+ 
+11:53:00 **** Incremental Build of configuration Debug for project UART_project ****
+make -j2 all 
+make: Nothing to be done for 'all'.
+11:53:03 **** Incremental Build of configuration Debug for project gpio_led ****
+make -j2 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+Building file: ../Utilities/Log/lcd_log.c
+C:\green-fox\week-08\day-02\gpio_led\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -DSTM32 -DSTM32F7 -DSTM32F746NGHx -DSTM32F746G_DISCO -DDEBUG -DSTM32F746xx -DUSE_HAL_DRIVER -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire480272" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q512a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/s5k5cag" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mfxstm32l152" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/device" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q128a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ts3510" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7735" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/rk043fn48h" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc/Legacy" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ov9655" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/otm8009a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/STM32746G-Discovery" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/Common" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/stmpe811" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/wm8994" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Fonts" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft5336" -I"C:/green-fox/week-08/day-02/gpio_led/inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft6x06" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/exc7200" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7789h2" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Log" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/adv7533" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire640480" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/core" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mx25l512" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Invoking: MCU GCC Compiler
+C:\green-fox\week-08\day-02\gpio_led\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -DSTM32 -DSTM32F7 -DSTM32F746NGHx -DSTM32F746G_DISCO -DDEBUG -DSTM32F746xx -DUSE_HAL_DRIVER -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire480272" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q512a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/s5k5cag" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mfxstm32l152" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/device" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q128a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ts3510" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7735" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/rk043fn48h" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc/Legacy" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ov9655" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/otm8009a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/STM32746G-Discovery" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/Common" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/stmpe811" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/wm8994" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Fonts" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft5336" -I"C:/green-fox/week-08/day-02/gpio_led/inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft6x06" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/exc7200" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7789h2" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Log" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/adv7533" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire640480" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/core" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mx25l512" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Utilities/Log/lcd_log.d" -MT"Utilities/Log/lcd_log.o" -o "Utilities/Log/lcd_log.o" "../Utilities/Log/lcd_log.c"
+../src/main.c: In function 'main':
+../src/main.c:133:4: error: too few arguments to function 'BSP_LED_Off'
+    BSP_LED_Off();
+    ^~~~~~~~~~~
+In file included from ../src/main.c:11:0:
+C:/green-fox/week-08/day-02/gpio_led/Utilities/STM32746G-Discovery/stm32746g_discovery.h:309:11: note: declared here
+ void      BSP_LED_Off(Led_TypeDef Led);
+           ^~~~~~~~~~~
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+Finished building: ../Utilities/Log/lcd_log.c
+ 
+11:53:10 **** Incremental Build of configuration Debug for project UART2_project ****
+make -j2 all 
+make: Nothing to be done for 'all'.
+11:54:25 **** Incremental Build of configuration Debug for project UART2_project ****
+make -j2 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\green-fox\week-08\day-03\UART2_project\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -DSTM32 -DSTM32F7 -DSTM32F746NGHx -DSTM32F746G_DISCO -DDEBUG -DSTM32F746xx -DUSE_HAL_DRIVER -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ampire480272" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/n25q512a" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/s5k5cag" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/mfxstm32l152" -I"C:/green-fox/week-08/day-03/UART2_project/CMSIS/device" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/n25q128a" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ts3510" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/st7735" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/rk043fn48h" -I"C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/Legacy" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ov9655" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/otm8009a" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/STM32746G-Discovery" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/Common" -I"C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/stmpe811" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/wm8994" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Fonts" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ft5336" -I"C:/green-fox/week-08/day-03/UART2_project/inc" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ft6x06" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/exc7200" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/st7789h2" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Log" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/adv7533" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/ampire640480" -I"C:/green-fox/week-08/day-03/UART2_project/CMSIS/core" -I"C:/green-fox/week-08/day-03/UART2_project/Utilities/Components/mx25l512" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:71:34: warning: pointer targets in passing argument 2 of 'HAL_UART_Transmit' differ in signedness [-Wpointer-sign]
+  HAL_UART_Transmit(&uart_handle, "szia\r\n", 6, 0xFFFF);
+                                  ^~~~~~~~~~
+In file included from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:376:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_uart.h:1137:19: note: expected 'uint8_t * {aka unsigned char *}' but argument is of type 'char *'
+ HAL_StatusTypeDef HAL_UART_Transmit(UART_HandleTypeDef *huart, uint8_t *pData, uint16_t Size, uint32_t Timeout);
+                   ^~~~~~~~~~~~~~~~~
+../src/main.c:89:15: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness [-Wpointer-sign]
+     if(strcmp(pCommandBuffer, "on") == 0){
+               ^~~~~~~~~~~~~~
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\stdio.h:29:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_def.h:48,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_rcc.h:45,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:240,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\string.h:36:6: note: expected 'const char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int  _EXFUN(strcmp,(const char *, const char *));
+      ^
+../src/main.c:91:23: warning: pointer targets in passing argument 1 of 'strcmp' differ in signedness [-Wpointer-sign]
+     } else if (strcmp(pCommandBuffer, "off") == 0){
+                       ^~~~~~~~~~~~~~
+In file included from c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\stdio.h:29:0,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_def.h:48,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_rcc.h:45,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal_conf.h:240,
+                 from C:/green-fox/week-08/day-03/UART2_project/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-03/UART2_project/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+c:\ac6\systemworkbench\plugins\fr.ac6.mcu.externaltools.arm-none.win32_1.16.0.201807130628\tools\compiler\arm-none-eabi\include\string.h:36:6: note: expected 'const char *' but argument is of type 'uint8_t * {aka unsigned char *}'
+ int  _EXFUN(strcmp,(const char *, const char *));
+      ^
+../src/main.c:74:10: warning: unused variable 'pCommand' [-Wunused-variable]
+  uint8_t pCommand[4] = {0};
+          ^~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: UART2_project.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -T"C:/green-fox/week-08/day-03/UART2_project/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "UART2_project.elf" @"objects.list"   -lm
+Finished building target: UART2_project.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "UART2_project.elf" "UART2_project.bin"
+arm-none-eabi-size "UART2_project.elf"
+   text	   data	    bss	    dec	    hex	filename
+  32560	   2524	   1800	  36884	   9014	UART2_project.elf
+ 
+11:54:31 **** Incremental Build of configuration Debug for project UART_project ****
+make -j2 all 
+make: Nothing to be done for 'all'.
+11:54:34 **** Incremental Build of configuration Debug for project gpio_led ****
+make -j2 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+Building file: ../Utilities/Components/wm8994/wm8994.c
+C:\green-fox\week-08\day-02\gpio_led\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -DSTM32 -DSTM32F7 -DSTM32F746NGHx -DSTM32F746G_DISCO -DDEBUG -DSTM32F746xx -DUSE_HAL_DRIVER -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire480272" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q512a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/s5k5cag" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mfxstm32l152" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/device" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q128a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ts3510" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7735" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/rk043fn48h" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc/Legacy" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ov9655" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/otm8009a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/STM32746G-Discovery" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/Common" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/stmpe811" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/wm8994" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Fonts" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft5336" -I"C:/green-fox/week-08/day-02/gpio_led/inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft6x06" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/exc7200" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7789h2" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Log" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/adv7533" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire640480" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/core" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mx25l512" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Invoking: MCU GCC Compiler
+C:\green-fox\week-08\day-02\gpio_led\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -DSTM32 -DSTM32F7 -DSTM32F746NGHx -DSTM32F746G_DISCO -DDEBUG -DSTM32F746xx -DUSE_HAL_DRIVER -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire480272" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q512a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/s5k5cag" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mfxstm32l152" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/device" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/n25q128a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ts3510" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7735" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/rk043fn48h" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc/Legacy" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ov9655" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/otm8009a" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/STM32746G-Discovery" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/Common" -I"C:/green-fox/week-08/day-02/gpio_led/HAL_Driver/Inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/stmpe811" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/wm8994" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Fonts" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft5336" -I"C:/green-fox/week-08/day-02/gpio_led/inc" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ft6x06" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/exc7200" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/st7789h2" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Log" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/adv7533" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/ampire640480" -I"C:/green-fox/week-08/day-02/gpio_led/CMSIS/core" -I"C:/green-fox/week-08/day-02/gpio_led/Utilities/Components/mx25l512" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"Utilities/Components/wm8994/wm8994.d" -MT"Utilities/Components/wm8994/wm8994.o" -o "Utilities/Components/wm8994/wm8994.o" "../Utilities/Components/wm8994/wm8994.c"
+../src/main.c: In function 'main':
+../src/main.c:133:4: error: too few arguments to function 'BSP_LED_Off'
+    BSP_LED_Off();
+    ^~~~~~~~~~~
+In file included from ../src/main.c:11:0:
+C:/green-fox/week-08/day-02/gpio_led/Utilities/STM32746G-Discovery/stm32746g_discovery.h:309:11: note: declared here
+ void      BSP_LED_Off(Led_TypeDef Led);
+           ^~~~~~~~~~~
+Finished building: ../Utilities/Components/wm8994/wm8994.c
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+make: *** Waiting for unfinished jobs....
+ 
+11:54:39 **** Incremental Build of configuration Debug for project UART2_project ****
+make -j2 all 
+make: Nothing to be done for 'all'.

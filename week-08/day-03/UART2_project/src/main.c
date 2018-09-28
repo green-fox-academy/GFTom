@@ -68,22 +68,50 @@ int main(void) {
 	BSP_COM_Init(COM1, &uart_handle);
 	BSP_LED_Init(LED1);
 
-	printf("Hello world\n");
+	HAL_UART_Transmit(&uart_handle, "szia\r\n", 6, 0xFFFF);
+	printf("%d\r\n", 4322);
 
 	uint8_t pCommand[4] = {0};
+
+	uint8_t pCommandBuffer[32];
+	uint8_t pCommandTemp[1];
+	int bufferCounter = 0;
 
 	//memset(pCommand, '\0', 4);
 
 	while (1) {
-		HAL_UART_Receive(&uart_handle, pCommand, 4, 1000);
-		if (strcmp(pCommand, "on") == 0) {
-			BSP_LED_On(LED1);
-			memset(pCommand, '\0', 4);
-		} else if (strcmp(pCommand, "off") == 0) {
-			BSP_LED_Off(LED1);
-			memset(pCommand, '\0', 4);
-		}
+		if(HAL_UART_Receive(&uart_handle, pCommandTemp, 1, 500) == HAL_OK){
+			pCommandBuffer[bufferCounter] = pCommandTemp[0];
+			bufferCounter++;
+			if(pCommandBuffer[bufferCounter-1] == '\n'){
+				pCommandBuffer[bufferCounter-1] = '\0';
+				bufferCounter =0;
+				if(strcmp(pCommandBuffer, "on") == 0){
+					BSP_LED_On(LED1);
+				} else if (strcmp(pCommandBuffer, "off") == 0){
+					BSP_LED_Off(LED1);
+				} else {
+					for(int i = 0; i < 6; i++){
+						BSP_LED_Toggle(LED1);
+						HAL_Delay(500);
+					}
+				}
+				}
+			}
 	}
+
+		//HAL_UART_Receive(&uart_handle, pCommand, 4, 1000);
+		//if (strcmp(pCommand, "on") == 0) {
+			//BSP_LED_On(LED1);
+			//memset(pCommand, '\0', 4);
+		//} else if (strcmp(pCommand, "off") == 0) {
+			//BSP_LED_Off(LED1);
+			//memset(pCommand, '\0', 4);
+		//} else if (strcmp(pCommand, "\0\0\0\0") == 0) {
+
+	//} else {
+		//}
+	//}
 
 }
 /**

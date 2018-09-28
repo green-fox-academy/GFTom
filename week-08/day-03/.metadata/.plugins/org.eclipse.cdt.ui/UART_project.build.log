@@ -1,6 +1,6 @@
-11:48:49 **** Incremental Build of configuration Debug for project UART_project ****
+11:54:31 **** Incremental Build of configuration Debug for project UART_project ****
 make -j2 all 
 make: Nothing to be done for 'all'.
 
-11:48:52 Build Finished (took 2s.871ms)
+11:54:32 Build Finished (took 1s.14ms)
 
