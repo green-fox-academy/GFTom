@@ -73,8 +73,8 @@ int main(void) {
 
 	uint8_t pCommand[4] = {0};
 
-	uint8_t pCommandBuffer[32];
-	uint8_t pCommandTemp[1];
+	char pCommandBuffer[32];
+	char pCommandTemp[1];
 	int bufferCounter = 0;
 
 	//memset(pCommand, '\0', 4);
