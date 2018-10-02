@@ -72,18 +72,6 @@ int main(void) {
 
 	__HAL_RCC_GPIOA_CLK_ENABLE();
 	__HAL_RCC_GPIOF_CLK_ENABLE();
-	__HAL_RCC_GPIOI_CLK_ENABLE();         // enable the GPIOI clock
-
-	GPIO_InitTypeDef conf;                // create the configuration struct
-	conf.Pin = GPIO_PIN_11;
-
-	conf.Pull = GPIO_NOPULL;
-	conf.Speed = GPIO_SPEED_FAST;
-	conf.Mode = GPIO_MODE_IT_RISING;
-	HAL_GPIO_Init(GPIOI, &conf);
-
-	HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0x0F, 0x00);
-	HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
 
 	tda.Pin = GPIO_PIN_8;
 	tda.Mode = GPIO_MODE_OUTPUT_PP;
@@ -95,20 +83,13 @@ int main(void) {
 	__HAL_RCC_TIM2_CLK_ENABLE();
 
 	while (1) {
-		/*if (BSP_PB_GetState(BUTTON_WAKEUP)) {
+		if (BSP_PB_GetState(BUTTON_WAKEUP)) {
 			HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, GPIO_PIN_SET);
 	}else{
 		HAL_GPIO_WritePin(GPIOA, GPIO_PIN_8, GPIO_PIN_RESET);
-	}*/
+	}
 	}
 }
-
-void EXTI15_10_IRQHandler(){
-	HAL_GPIO_EXTI_IRQHandler(GPIO_PIN_11);
-}
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
-	    HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_8);// yeey! this is the interrupt routine!
-	}
 /**
  * @brief  Retargets the C library printf function to the USART.
  * @param  None

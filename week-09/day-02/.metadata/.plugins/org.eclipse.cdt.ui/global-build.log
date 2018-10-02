@@ -716,3 +716,32 @@ arm-none-eabi-size "led_on_off.elf"
 11:45:05 **** Incremental Build of configuration Debug for project led_on_off ****
 make -j2 all 
 make: Nothing to be done for 'all'.
+12:54:16 **** Incremental Build of configuration Debug for project led_on_off ****
+make -j2 all 
+Building file: ../src/main.c
+Building file: ../startup/startup_stm32f746xx.S
+Invoking: MCU GCC Compiler
+Invoking: MCU GCC Compiler
+C:\green-fox\week-09\day-02\led_on_off\Debug
+C:\green-fox\week-09\day-02\led_on_off\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -DSTM32 -DSTM32F7 -DSTM32F746NGHx -DSTM32F746G_DISCO -DDEBUG -DSTM32F746xx -DUSE_HAL_DRIVER -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/ampire480272" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/n25q512a" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/s5k5cag" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/mfxstm32l152" -I"C:/green-fox/week-09/day-02/led_on_off/CMSIS/device" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/n25q128a" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/ts3510" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/st7735" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/rk043fn48h" -I"C:/green-fox/week-09/day-02/led_on_off/HAL_Driver/Inc/Legacy" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/ov9655" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/otm8009a" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/STM32746G-Discovery" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/Common" -I"C:/green-fox/week-09/day-02/led_on_off/HAL_Driver/Inc" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/stmpe811" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/wm8994" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Fonts" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/ft5336" -I"C:/green-fox/week-09/day-02/led_on_off/inc" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/ft6x06" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/exc7200" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/st7789h2" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Log" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/adv7533" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/ampire640480" -I"C:/green-fox/week-09/day-02/led_on_off/CMSIS/core" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/mx25l512" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -DSTM32 -DSTM32F7 -DSTM32F746NGHx -DSTM32F746G_DISCO -DDEBUG -DSTM32F746xx -DUSE_HAL_DRIVER -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/ampire480272" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/n25q512a" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/s5k5cag" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/mfxstm32l152" -I"C:/green-fox/week-09/day-02/led_on_off/CMSIS/device" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/n25q128a" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/ts3510" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/st7735" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/rk043fn48h" -I"C:/green-fox/week-09/day-02/led_on_off/HAL_Driver/Inc/Legacy" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/ov9655" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/otm8009a" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/STM32746G-Discovery" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/Common" -I"C:/green-fox/week-09/day-02/led_on_off/HAL_Driver/Inc" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/stmpe811" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/wm8994" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Fonts" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/ft5336" -I"C:/green-fox/week-09/day-02/led_on_off/inc" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/ft6x06" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/exc7200" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/st7789h2" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Log" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/adv7533" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/ampire640480" -I"C:/green-fox/week-09/day-02/led_on_off/CMSIS/core" -I"C:/green-fox/week-09/day-02/led_on_off/Utilities/Components/mx25l512" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"startup/startup_stm32f746xx.d" -MT"startup/startup_stm32f746xx.o" -o "startup/startup_stm32f746xx.o" "../startup/startup_stm32f746xx.S"
+Finished building: ../startup/startup_stm32f746xx.S
+ 
+Finished building: ../src/main.c
+ 
+Building target: led_on_off.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -T"C:/green-fox/week-09/day-02/led_on_off/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "led_on_off.elf" @"objects.list"   -lm
+Finished building target: led_on_off.elf
+ 
+make --no-print-directory post-build
+Generating binary and Printing size information:
+arm-none-eabi-objcopy -O binary "led_on_off.elf" "led_on_off.bin"
+arm-none-eabi-size "led_on_off.elf"
+   text	   data	    bss	    dec	    hex	filename
+   9500	   1120	   1756	  12376	   3058	led_on_off.elf
+ 
+12:54:48 **** Incremental Build of configuration Debug for project led_on_off ****
+make -j2 all 
+make: Nothing to be done for 'all'.
