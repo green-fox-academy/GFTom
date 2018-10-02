@@ -1,0 +1,6 @@
+16:31:43 **** Incremental Build of configuration Debug for project LED_timer_interrupt ****
+make -j2 all 
+make: Nothing to be done for 'all'.
+
+16:31:44 Build Finished (took 991ms)
+

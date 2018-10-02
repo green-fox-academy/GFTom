@@ -45,3 +45,6 @@ This warning can be switched off on the Team > Git > Confirmations and Warnings 
 
 !ENTRY org.eclipse.launchbar.core 2 0 2018-10-02 11:37:12.672
 !MESSAGE Enablement expression is missing for config provider for org.eclipse.cdt.debug.core.coreBuildDescriptorType
+
+!ENTRY org.eclipse.cdt.core 1 0 2018-10-02 14:00:20.633
+!MESSAGE Indexed 'LED_timer_interrupt' (112 sources, 113 headers) in 9,87 sec: 16 158 declarations; 108 978 references; 22 unresolved inclusions; 571 syntax errors; 15 600 unresolved names (11%)
