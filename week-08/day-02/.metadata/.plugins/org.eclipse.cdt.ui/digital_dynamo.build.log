@@ -1,0 +1,81 @@
+12:30:04 **** Incremental Build of configuration Debug for project digital_dynamo ****
+make -j2 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\green-fox\week-08\day-02\digital_dynamo\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -DSTM32 -DSTM32F7 -DSTM32F746NGHx -DSTM32F746G_DISCO -DDEBUG -DSTM32F746xx -DUSE_HAL_DRIVER -I"C:/green-fox/week-08/day-02/digital_dynamo/Utilities/Components/ampire480272" -I"C:/green-fox/week-08/day-02/digital_dynamo/Utilities/Components/n25q512a" -I"C:/green-fox/week-08/day-02/digital_dynamo/Utilities/Components/s5k5cag" -I"C:/green-fox/week-08/day-02/digital_dynamo/Utilities/Components/mfxstm32l152" -I"C:/green-fox/week-08/day-02/digital_dynamo/CMSIS/device" -I"C:/green-fox/week-08/day-02/digital_dynamo/Utilities/Components/n25q128a" -I"C:/green-fox/week-08/day-02/digital_dynamo/Utilities/Components/ts3510" -I"C:/green-fox/week-08/day-02/digital_dynamo/Utilities/Components/st7735" -I"C:/green-fox/week-08/day-02/digital_dynamo/Utilities/Components/rk043fn48h" -I"C:/green-fox/week-08/day-02/digital_dynamo/HAL_Driver/Inc/Legacy" -I"C:/green-fox/week-08/day-02/digital_dynamo/Utilities/Components/ov9655" -I"C:/green-fox/week-08/day-02/digital_dynamo/Utilities/Components/otm8009a" -I"C:/green-fox/week-08/day-02/digital_dynamo/Utilities/STM32746G-Discovery" -I"C:/green-fox/week-08/day-02/digital_dynamo/Utilities/Components/Common" -I"C:/green-fox/week-08/day-02/digital_dynamo/HAL_Driver/Inc" -I"C:/green-fox/week-08/day-02/digital_dynamo/Utilities/Components/stmpe811" -I"C:/green-fox/week-08/day-02/digital_dynamo/Utilities/Components/wm8994" -I"C:/green-fox/week-08/day-02/digital_dynamo/Utilities/Fonts" -I"C:/green-fox/week-08/day-02/digital_dynamo/Utilities/Components/ft5336" -I"C:/green-fox/week-08/day-02/digital_dynamo/inc" -I"C:/green-fox/week-08/day-02/digital_dynamo/Utilities/Components/ft6x06" -I"C:/green-fox/week-08/day-02/digital_dynamo/Utilities/Components/exc7200" -I"C:/green-fox/week-08/day-02/digital_dynamo/Utilities/Components/st7789h2" -I"C:/green-fox/week-08/day-02/digital_dynamo/Utilities/Log" -I"C:/green-fox/week-08/day-02/digital_dynamo/Utilities/Components/adv7533" -I"C:/green-fox/week-08/day-02/digital_dynamo/Utilities/Components/ampire640480" -I"C:/green-fox/week-08/day-02/digital_dynamo/CMSIS/core" -I"C:/green-fox/week-08/day-02/digital_dynamo/Utilities/Components/mx25l512" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:16:19: warning: large integer implicitly truncated to unsigned type [-Woverflow]
+ uint8_t compare = 500;
+                   ^~~
+In file included from C:/green-fox/week-08/day-02/digital_dynamo/HAL_Driver/Inc/stm32f7xx_hal_tim.h:1259:0,
+                 from C:/green-fox/week-08/day-02/digital_dynamo/HAL_Driver/Inc/stm32f7xx_hal_conf.h:372,
+                 from C:/green-fox/week-08/day-02/digital_dynamo/HAL_Driver/Inc/stm32f7xx_hal.h:46,
+                 from C:/green-fox/week-08/day-02/digital_dynamo/CMSIS/device/stm32f7xx.h:219,
+                 from ../src/main.c:1:
+../src/main.c: In function 'main':
+C:/green-fox/week-08/day-02/digital_dynamo/HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h:340:17: error: invalid operands to binary == (have 'TIM_OC_InitTypeDef {aka struct <anonymous>}' and 'long unsigned int')
+ (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+                 ^
+../src/main.c:111:3: note: in expansion of macro '__HAL_TIM_SET_COMPARE'
+   __HAL_TIM_SET_COMPARE(&TimHandle, sConfig, compare);
+   ^~~~~~~~~~~~~~~~~~~~~
+C:/green-fox/week-08/day-02/digital_dynamo/HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h:341:17: error: invalid operands to binary == (have 'TIM_OC_InitTypeDef {aka struct <anonymous>}' and 'long unsigned int')
+  ((__CHANNEL__) == TIM_CHANNEL_2) ? ((__HANDLE__)->Instance->CCR2 = (__COMPARE__)) :\
+                 ^
+../src/main.c:111:3: note: in expansion of macro '__HAL_TIM_SET_COMPARE'
+   __HAL_TIM_SET_COMPARE(&TimHandle, sConfig, compare);
+   ^~~~~~~~~~~~~~~~~~~~~
+C:/green-fox/week-08/day-02/digital_dynamo/HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h:342:17: error: invalid operands to binary == (have 'TIM_OC_InitTypeDef {aka struct <anonymous>}' and 'long unsigned int')
+  ((__CHANNEL__) == TIM_CHANNEL_3) ? ((__HANDLE__)->Instance->CCR3 = (__COMPARE__)) :\
+                 ^
+../src/main.c:111:3: note: in expansion of macro '__HAL_TIM_SET_COMPARE'
+   __HAL_TIM_SET_COMPARE(&TimHandle, sConfig, compare);
+   ^~~~~~~~~~~~~~~~~~~~~
+C:/green-fox/week-08/day-02/digital_dynamo/HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h:343:17: error: invalid operands to binary == (have 'TIM_OC_InitTypeDef {aka struct <anonymous>}' and 'long unsigned int')
+  ((__CHANNEL__) == TIM_CHANNEL_4) ? ((__HANDLE__)->Instance->CCR4 = (__COMPARE__)) :\
+                 ^
+../src/main.c:111:3: note: in expansion of macro '__HAL_TIM_SET_COMPARE'
+   __HAL_TIM_SET_COMPARE(&TimHandle, sConfig, compare);
+   ^~~~~~~~~~~~~~~~~~~~~
+C:/green-fox/week-08/day-02/digital_dynamo/HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h:344:17: error: invalid operands to binary == (have 'TIM_OC_InitTypeDef {aka struct <anonymous>}' and 'long unsigned int')
+  ((__CHANNEL__) == TIM_CHANNEL_5) ? ((__HANDLE__)->Instance->CCR5 = (__COMPARE__)) :\
+                 ^
+../src/main.c:111:3: note: in expansion of macro '__HAL_TIM_SET_COMPARE'
+   __HAL_TIM_SET_COMPARE(&TimHandle, sConfig, compare);
+   ^~~~~~~~~~~~~~~~~~~~~
+../src/main.c: In function 'HAL_GPIO_EXTI_Callback':
+C:/green-fox/week-08/day-02/digital_dynamo/HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h:340:17: error: invalid operands to binary == (have 'TIM_OC_InitTypeDef {aka struct <anonymous>}' and 'long unsigned int')
+ (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+                 ^
+../src/main.c:123:4: note: in expansion of macro '__HAL_TIM_SET_COMPARE'
+    __HAL_TIM_SET_COMPARE(&TimHandle, sConfig, compare);
+    ^~~~~~~~~~~~~~~~~~~~~
+C:/green-fox/week-08/day-02/digital_dynamo/HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h:341:17: error: invalid operands to binary == (have 'TIM_OC_InitTypeDef {aka struct <anonymous>}' and 'long unsigned int')
+  ((__CHANNEL__) == TIM_CHANNEL_2) ? ((__HANDLE__)->Instance->CCR2 = (__COMPARE__)) :\
+                 ^
+../src/main.c:123:4: note: in expansion of macro '__HAL_TIM_SET_COMPARE'
+    __HAL_TIM_SET_COMPARE(&TimHandle, sConfig, compare);
+    ^~~~~~~~~~~~~~~~~~~~~
+C:/green-fox/week-08/day-02/digital_dynamo/HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h:342:17: error: invalid operands to binary == (have 'TIM_OC_InitTypeDef {aka struct <anonymous>}' and 'long unsigned int')
+  ((__CHANNEL__) == TIM_CHANNEL_3) ? ((__HANDLE__)->Instance->CCR3 = (__COMPARE__)) :\
+                 ^
+../src/main.c:123:4: note: in expansion of macro '__HAL_TIM_SET_COMPARE'
+    __HAL_TIM_SET_COMPARE(&TimHandle, sConfig, compare);
+    ^~~~~~~~~~~~~~~~~~~~~
+C:/green-fox/week-08/day-02/digital_dynamo/HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h:343:17: error: invalid operands to binary == (have 'TIM_OC_InitTypeDef {aka struct <anonymous>}' and 'long unsigned int')
+  ((__CHANNEL__) == TIM_CHANNEL_4) ? ((__HANDLE__)->Instance->CCR4 = (__COMPARE__)) :\
+                 ^
+../src/main.c:123:4: note: in expansion of macro '__HAL_TIM_SET_COMPARE'
+    __HAL_TIM_SET_COMPARE(&TimHandle, sConfig, compare);
+    ^~~~~~~~~~~~~~~~~~~~~
+C:/green-fox/week-08/day-02/digital_dynamo/HAL_Driver/Inc/stm32f7xx_hal_tim_ex.h:344:17: error: invalid operands to binary == (have 'TIM_OC_InitTypeDef {aka struct <anonymous>}' and 'long unsigned int')
+  ((__CHANNEL__) == TIM_CHANNEL_5) ? ((__HANDLE__)->Instance->CCR5 = (__COMPARE__)) :\
+                 ^
+../src/main.c:123:4: note: in expansion of macro '__HAL_TIM_SET_COMPARE'
+    __HAL_TIM_SET_COMPARE(&TimHandle, sConfig, compare);
+    ^~~~~~~~~~~~~~~~~~~~~
+src/subdir.mk:27: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+
+12:30:05 Build Finished (took 1s.332ms)
+
