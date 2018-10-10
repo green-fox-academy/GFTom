@@ -1,0 +1,30 @@
+11:49:24 **** Incremental Build of configuration Debug for project practice_001 ****
+make -j2 all 
+Building file: ../src/main.c
+Invoking: MCU GCC Compiler
+C:\green-fox\week-09\practice\practice_001\Debug
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -DSTM32 -DSTM32F7 -DSTM32F746NGHx -DSTM32F746G_DISCO -DDEBUG -DSTM32F746xx -DUSE_HAL_DRIVER -I"C:/green-fox/week-09/practice/practice_001/Utilities/Components/ampire480272" -I"C:/green-fox/week-09/practice/practice_001/Utilities/Components/n25q512a" -I"C:/green-fox/week-09/practice/practice_001/Utilities/Components/s5k5cag" -I"C:/green-fox/week-09/practice/practice_001/Utilities/Components/mfxstm32l152" -I"C:/green-fox/week-09/practice/practice_001/CMSIS/device" -I"C:/green-fox/week-09/practice/practice_001/Utilities/Components/n25q128a" -I"C:/green-fox/week-09/practice/practice_001/Utilities/Components/ts3510" -I"C:/green-fox/week-09/practice/practice_001/Utilities/Components/st7735" -I"C:/green-fox/week-09/practice/practice_001/Utilities/Components/rk043fn48h" -I"C:/green-fox/week-09/practice/practice_001/HAL_Driver/Inc/Legacy" -I"C:/green-fox/week-09/practice/practice_001/Utilities/Components/ov9655" -I"C:/green-fox/week-09/practice/practice_001/Utilities/Components/otm8009a" -I"C:/green-fox/week-09/practice/practice_001/Utilities/STM32746G-Discovery" -I"C:/green-fox/week-09/practice/practice_001/Utilities/Components/Common" -I"C:/green-fox/week-09/practice/practice_001/HAL_Driver/Inc" -I"C:/green-fox/week-09/practice/practice_001/Utilities/Components/stmpe811" -I"C:/green-fox/week-09/practice/practice_001/Utilities/Components/wm8994" -I"C:/green-fox/week-09/practice/practice_001/Utilities/Fonts" -I"C:/green-fox/week-09/practice/practice_001/Utilities/Components/ft5336" -I"C:/green-fox/week-09/practice/practice_001/inc" -I"C:/green-fox/week-09/practice/practice_001/Utilities/Components/ft6x06" -I"C:/green-fox/week-09/practice/practice_001/Utilities/Components/exc7200" -I"C:/green-fox/week-09/practice/practice_001/Utilities/Components/st7789h2" -I"C:/green-fox/week-09/practice/practice_001/Utilities/Log" -I"C:/green-fox/week-09/practice/practice_001/Utilities/Components/adv7533" -I"C:/green-fox/week-09/practice/practice_001/Utilities/Components/ampire640480" -I"C:/green-fox/week-09/practice/practice_001/CMSIS/core" -I"C:/green-fox/week-09/practice/practice_001/Utilities/Components/mx25l512" -O0 -g3 -Wall -fmessage-length=0 -ffunction-sections -c -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:86:3: warning: implicit declaration of function 'HAL_DELAY'; did you mean 'HAL_Delay'? [-Wimplicit-function-declaration]
+   HAL_DELAY(500);
+   ^~~~~~~~~
+   HAL_Delay
+../src/main.c:87:3: warning: implicit declaration of function 'HAL_GPIO_WritePIN'; did you mean 'HAL_GPIO_WritePin'? [-Wimplicit-function-declaration]
+   HAL_GPIO_WritePIN(GPIOF, GPIO_PIN_8, GPIO_PIN_RESET);
+   ^~~~~~~~~~~~~~~~~
+   HAL_GPIO_WritePin
+Finished building: ../src/main.c
+ 
+Building target: practice_001.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -T"C:/green-fox/week-09/practice/practice_001/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "practice_001.elf" @"objects.list"   -lm
+src/main.o: In function `main':
+C:\green-fox\week-09\practice\practice_001\Debug/../src/main.c:86: undefined reference to `HAL_DELAY'
+C:\green-fox\week-09\practice\practice_001\Debug/../src/main.c:87: undefined reference to `HAL_GPIO_WritePIN'
+C:\green-fox\week-09\practice\practice_001\Debug/../src/main.c:89: undefined reference to `HAL_DELAY'
+collect2.exe: error: ld returned 1 exit status
+makefile:51: recipe for target 'practice_001.elf' failed
+make: *** [practice_001.elf] Error 1
+
+11:49:27 Build Finished (took 3s.107ms)
+

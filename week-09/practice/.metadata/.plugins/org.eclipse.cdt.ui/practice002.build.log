@@ -1,0 +1,15 @@
+17:42:01 **** Incremental Build of configuration Debug for project practice002 ****
+make -j2 all 
+Building target: practice002.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -T"C:/green-fox/week-09/practice/practice002/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "practice002.elf" @"objects.list"   -lm
+src/main.o: In function `main':
+C:\green-fox\week-09\practice\practice002\Debug/../src/main.c:86: undefined reference to `HAL_DELAY'
+C:\green-fox\week-09\practice\practice002\Debug/../src/main.c:87: undefined reference to `HAL_GPIO_WritePIN'
+C:\green-fox\week-09\practice\practice002\Debug/../src/main.c:89: undefined reference to `HAL_DELAY'
+collect2.exe: error: ld returned 1 exit status
+makefile:51: recipe for target 'practice002.elf' failed
+make: *** [practice002.elf] Error 1
+
+17:42:03 Build Finished (took 1s.763ms)
+
