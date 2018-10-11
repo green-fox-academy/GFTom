@@ -1,6 +1,6 @@
-17:48:01 **** Incremental Build of configuration Debug for project practice003 ****
+18:17:17 **** Incremental Build of configuration Debug for project practice003 ****
 make -j2 all 
 make: Nothing to be done for 'all'.
 
-17:48:02 Build Finished (took 1s.389ms)
+18:17:18 Build Finished (took 967ms)
 

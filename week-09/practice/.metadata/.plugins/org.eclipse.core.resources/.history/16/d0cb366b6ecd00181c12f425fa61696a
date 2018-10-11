@@ -15,7 +15,6 @@ GPIO_InitTypeDef conf;
 
 volatile int state = 0;
 volatile int button_press_counter = 0;
-volatile int start = 0;
 
 //#undef __GNUC__
 
@@ -155,13 +154,15 @@ void EXTI15_10_IRQHandler() {
 }
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
-	button_press_counter++;
-	HAL_TIM_Base_Start_IT(&TimHandle);
-	printf("The button is pressed and released.\n");
+	 button_press_counter++;
+	 //HAL_TIM_Base_Stop_IT(&TimHandle);
+	 //TIM3->ARR = 16665;
+	 HAL_TIM_Base_Start_IT(&TimHandle);
+	 printf("The button is pressed and released.\n");
 
 	/* if(){
-	 printf("You pressed the button %lu ms\r\n times.", button_press_counter);
-	 printf("Program is in blinking state, please wait 9 sec.");
+		 printf("You pressed the button %lu ms\r\n times.", button_press_counter);
+		 printf("Program is in blinking state, please wait 9 sec.");
 	 }*/
 }
 
@@ -170,9 +171,6 @@ void TIM3_IRQHandler() {
 }
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
-	start++;
-	if(start == 2){
-		printf("You pressed the button %lu times\r\n.", button_press_counter);
 	if (state == 0) {
 		HAL_TIM_Base_Stop_IT(&TimHandle);
 		state = 1;
@@ -192,7 +190,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 		//HAL_GPIO_WritePin(GPIOF, GPIO_PIN_8, GPIO_PIN_RESET);
 		HAL_TIM_Base_Start_IT(&TimHandle);
 	}
-}
+
 }
 
 /**

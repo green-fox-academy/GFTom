@@ -155,7 +155,11 @@ void EXTI15_10_IRQHandler() {
 }
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
+	//TIM3->DIER = TIM_DIER_UIE;
 	button_press_counter++;
+	//HAL_TIM_Base_Stop_IT(&TimHandle);
+	//TIM3->CNT = 0;
+	//TIM3->ARR = 16665;
 	HAL_TIM_Base_Start_IT(&TimHandle);
 	printf("The button is pressed and released.\n");
 
@@ -172,7 +176,6 @@ void TIM3_IRQHandler() {
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 	start++;
 	if(start == 2){
-		printf("You pressed the button %lu times\r\n.", button_press_counter);
 	if (state == 0) {
 		HAL_TIM_Base_Stop_IT(&TimHandle);
 		state = 1;

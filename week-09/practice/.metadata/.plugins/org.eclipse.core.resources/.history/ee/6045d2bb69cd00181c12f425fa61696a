@@ -15,7 +15,6 @@ GPIO_InitTypeDef conf;
 
 volatile int state = 0;
 volatile int button_press_counter = 0;
-volatile int start = 0;
 
 //#undef __GNUC__
 
@@ -89,7 +88,7 @@ int main(void) {
 	conf.Pin = GPIO_PIN_11;               // the pin is the 11
 	conf.Pull = GPIO_NOPULL;
 	conf.Speed = GPIO_SPEED_FAST;         // port speed to fast
-	conf.Mode = GPIO_MODE_IT_FALLING;
+	conf.Mode = GPIO_MODE_IT_RISING_FALLING;
 
 	HAL_GPIO_Init(GPIOI, &conf);
 
@@ -99,18 +98,17 @@ int main(void) {
 	HAL_NVIC_SetPriority(TIM3_IRQn, 0x0F, 0x00);
 	HAL_NVIC_EnableIRQ(TIM3_IRQn);
 
-	HAL_NVIC_SetPriority(EXTI15_10_IRQn, 0x0F, 0x00);
-	HAL_NVIC_EnableIRQ(EXTI15_10_IRQn);
-
 	__HAL_RCC_TIM3_CLK_ENABLE();
 
 	TimHandle.Instance = TIM3;
-	TimHandle.Init.Period = 16665;
+	TimHandle.Init.Period = 3333;
 	TimHandle.Init.Prescaler = 32400;
 	TimHandle.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
 	TimHandle.Init.CounterMode = TIM_COUNTERMODE_UP;
 
 	HAL_TIM_Base_Init(&TimHandle);            //Configure the timer
+
+	HAL_TIM_Base_Start_IT(&TimHandle);
 
 	/* *******************************************/
 
@@ -155,14 +153,19 @@ void EXTI15_10_IRQHandler() {
 }
 
 void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin) {
-	button_press_counter++;
-	HAL_TIM_Base_Start_IT(&TimHandle);
-	printf("The button is pressed and released.\n");
-
-	/* if(){
+	/*char message[50] = "The button is pressed and released.";
+	 HAL_GetTick();
+	 button_press_counter++;
+	 HAL_TIM_Base_Stop_IT(&TimHandle);
+	 HAL_TIM_Base_Start_IT(&TimHandle);
 	 printf("You pressed the button %lu ms\r\n times.", button_press_counter);
 	 printf("Program is in blinking state, please wait 9 sec.");
+
+	 if(){
+
+	 }
 	 }*/
+	printf("Hello end\n");
 }
 
 void TIM3_IRQHandler() {
@@ -170,9 +173,6 @@ void TIM3_IRQHandler() {
 }
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
-	start++;
-	if(start == 2){
-		printf("You pressed the button %lu times\r\n.", button_press_counter);
 	if (state == 0) {
 		HAL_TIM_Base_Stop_IT(&TimHandle);
 		state = 1;
@@ -192,7 +192,7 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 		//HAL_GPIO_WritePin(GPIOF, GPIO_PIN_8, GPIO_PIN_RESET);
 		HAL_TIM_Base_Start_IT(&TimHandle);
 	}
-}
+
 }
 
 /**

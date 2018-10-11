@@ -1,0 +1,14 @@
+16:47:43 **** Incremental Build of configuration Debug for project timey ****
+make -j2 all 
+Building target: timey.elf
+Invoking: MCU GCC Linker
+arm-none-eabi-gcc -mcpu=cortex-m7 -mthumb -mfloat-abi=hard -mfpu=fpv5-sp-d16 -T"C:/green-fox/week-09/practice/timey/LinkerScript.ld" -Wl,-Map=output.map -Wl,--gc-sections -o "timey.elf" @"objects.list"   -lm
+src/main.o: In function `__io_putchar':
+C:\green-fox\week-09\practice\timey\Debug/../src/main.c:178: multiple definition of `__io_putchar'
+Utilities/Log/lcd_log.o:C:\green-fox\week-09\practice\timey\Debug/../Utilities/Log/lcd_log.c:244: first defined here
+collect2.exe: error: ld returned 1 exit status
+makefile:51: recipe for target 'timey.elf' failed
+make: *** [timey.elf] Error 1
+
+16:47:53 Build Finished (took 9s.206ms)
+

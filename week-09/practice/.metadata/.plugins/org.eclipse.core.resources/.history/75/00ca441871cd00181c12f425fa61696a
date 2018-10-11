@@ -172,7 +172,7 @@ void TIM3_IRQHandler() {
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim) {
 	start++;
 	if(start == 2){
-		printf("You pressed the button %lu times\r\n.", button_press_counter);
+		printf("You pressed the button %lu ms\r\n times.", button_press_counter);
 	if (state == 0) {
 		HAL_TIM_Base_Stop_IT(&TimHandle);
 		state = 1;
